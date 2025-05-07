@@ -1,14 +1,14 @@
 import React from "react";
 import SingleItem from "./SingleItem";
 
-const ItemList = ({ title, items, itemsArray }) => {
+const ItemList = ({ title, items, itemsArray, path, idPath }) => {
 
     return (
         <div className="item-list">
             <div className="item-list__header">
                 <h2>{title} populares</h2>
-                <a className="item-list__link"
-                    href="/">Mostrar tudo
+                <a href={path} className="item-list__link" >
+                    Mostrar tudo
                 </a>
             </div>
 
@@ -18,6 +18,7 @@ const ItemList = ({ title, items, itemsArray }) => {
                     .map((currentObj, index) => (
                         <SingleItem
                          //name={currentObj.name} 
+                         idPath={idPath}
                          {...currentObj}
                          key={`${title}-${index}`} />
                     ))}
