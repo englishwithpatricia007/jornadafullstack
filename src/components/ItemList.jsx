@@ -13,35 +13,15 @@ const ItemList = ({ title, items }) => {
             </div>
 
             <div className="item-list__container">
-                {items === 5 ? (
-                    <>
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                    </>
 
-                ) : (
-                    <>
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                        <SingleItem />
-                    </>
-                )
-                }
+                {Array(items).fill()
+                .map((currentObj, index) => (
+                    <SingleItem key={`${title}-${index}`} />
+                ))}
 
             </div>
         </div>
     )
-
 }
 
 export default ItemList
