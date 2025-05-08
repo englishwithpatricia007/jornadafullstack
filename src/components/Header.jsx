@@ -10,7 +10,6 @@ const Header = () => {
 
         <Link to="/" className="header__link">
             <h1>Spotify</h1>
-
         </Link>
     </div>
 
