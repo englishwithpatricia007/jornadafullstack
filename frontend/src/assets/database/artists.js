@@ -1,3 +1,7 @@
+import { artistsArray } from "../../../api/api.js";
+
+
+/*
 export const artistsArray = [
   {
     id: 1,
@@ -121,4 +125,7 @@ export const artistsArray = [
     name: "Henry Freitas",
     banner: "https://i.scdn.co/image/ab676186000010169415572375bac1960f9de7e5",
   },
-];
+];*/
+
+
+export { artistsArray }

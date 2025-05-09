@@ -1,10 +1,10 @@
 import express from 'express'
-import {artistsArray} from "../../frontend/src/assets/database/artists.js"
-import {songsArray} from "../../frontend/src/assets/database/songs.js"
+import cors from 'cors' //Middleware (frontend/api/api.js)b-> permite as requisições
 import { db } from './connect.js';
 
-
 const app = express();
+app.use(cors())
+
 const PORT = 3000;
 
 app.listen(PORT, () => {

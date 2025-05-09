@@ -1,3 +1,5 @@
+import { songsArray } from "../../../api/api.js";
+/*
 export const songsArray = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e022774b00531d558bc19e12a24",
@@ -1719,4 +1721,6 @@ export const songsArray = [
       "https://jornada-fullstack.s3.us-east-2.amazonaws.com/ima-de-problema.mp3",
     id: 200,
   },
-];
+]; 
+*/
+export { songsArray }
