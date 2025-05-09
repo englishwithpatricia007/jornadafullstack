@@ -8,7 +8,7 @@ const Song = () => {
     const { id } = useParams();
 
 
-    const { image, name, artist, duration } = songsArray.filter(
+    const { image, name, artist, duration, audio} = songsArray.filter(
         (currentSongObj) => currentSongObj._id === id
     )[0];
 
@@ -45,7 +45,8 @@ const Song = () => {
                     />
                 </Link>
 
-                <Player duration={duration} randomSongIdFromArtist={randomSongIdFromArtist} randomSongIdFromArtist2={randomSongIdFromArtist2} />
+                <Player duration={duration} randomSongIdFromArtist={randomSongIdFromArtist} randomSongIdFromArtist2={randomSongIdFromArtist2} 
+                audio = {audio}/>
 
                 <div>
                     <p className="song__name">{name}</p>
