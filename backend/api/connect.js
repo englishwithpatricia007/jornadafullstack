@@ -6,8 +6,7 @@ const client = new MongoClient(URI);
 
 
 export const db = client.db("spotifyAula");
-const songCollection = await db.collection('songs').find({}).toArray(); //JavaScript Assíncrono await async
-console.log(songCollection);
 
-const artistCollection = await db.collection('artists').find({}).toArray(); //JavaScript Assíncrono await async
-console.log(artistCollection);
+
+//const songCollection = await db.collection('songs').find({}).toArray(); //JavaScript Assíncrono await async
+//console.log(songCollection);
