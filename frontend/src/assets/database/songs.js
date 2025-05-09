@@ -1,4 +1,6 @@
 import { songsArray } from "../../../api/api.js";
+export { songsArray };
+
 /*
 export const songsArray = [
   {
@@ -1722,5 +1724,6 @@ export const songsArray = [
     id: 200,
   },
 ]; 
+
 */
-export { songsArray }
+

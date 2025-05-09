@@ -4,13 +4,12 @@
 //Axio é um pacote
 import axios from "axios"
 
-const URL = "http://localhost:3000"
 
-const resArtists = await axios.get(`${URL}/artists`) //Promise -> await
-const resSongs = await axios.get(`${URL}/songs`) //Promise -> await
+const API_URL = "http://localhost:3000";
 
-export const artistsArray = resArtists.data
-export const songsArray = resSongs.data
 
-//console.log(artistsArray)
-//console.log(songsArray)
+const responseArtists = await axios.get(`${API_URL}/artists`);
+const responseSongs = await axios.get(`${API_URL}/songs`);
+
+export const artistsArray = responseArtists.data;
+export const songsArray = responseSongs.data;

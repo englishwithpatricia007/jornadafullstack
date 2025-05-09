@@ -9,7 +9,7 @@ const Song = () => {
 
 
     const { image, name, artist, duration } = songsArray.filter(
-        (currentSongObj) => currentSongObj.id === Number(id)
+        (currentSongObj) => currentSongObj._id === id
     )[0];
 
     const artistObj = artistsArray.filter(
@@ -20,8 +20,8 @@ const Song = () => {
         .filter((currentSongObj) => currentSongObj.artist === artist)
     const randomIndex = Math.floor(Math.random() * (songsArrayFromArtist.length - 1))
     const randomIndex2 = Math.floor(Math.random() * (songsArrayFromArtist.length - 1))
-    const randomSongIdFromArtist = songsArrayFromArtist[randomIndex].id    
-    const randomSongIdFromArtist2 = songsArrayFromArtist[randomIndex2].id
+    const randomSongIdFromArtist = songsArrayFromArtist[randomIndex]._id    
+    const randomSongIdFromArtist2 = songsArrayFromArtist[randomIndex2]._id
 
 
     return (
@@ -36,7 +36,7 @@ const Song = () => {
             </div>
 
             <div className="song__bar">
-                <Link to={`/artist/${artistObj.id}`} className="song__artist-image">
+                <Link to={`/artist/${artistObj._id}`} className="song__artist-image">
                     <img
                         width={75}
                         heigth={75}

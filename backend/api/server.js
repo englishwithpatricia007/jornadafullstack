@@ -1,5 +1,7 @@
+//Middleware (frontend/api/api.js)b-> permite as requisições
+
 import express from 'express'
-import cors from 'cors' //Middleware (frontend/api/api.js)b-> permite as requisições
+import cors from 'cors' 
 import { db } from './connect.js';
 
 const app = express();
