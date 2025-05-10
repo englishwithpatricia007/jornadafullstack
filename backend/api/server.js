@@ -24,11 +24,11 @@ app.get("/api/songs", async (req, res) => {
     res.send(await db.collection('songs').find({}).toArray())
 })
 
-/*app.use(express.static(path.join(__dirname, "../frontend/dist")))
+app.use(express.static(path.join(__dirname, "../frontend/dist")))
 
 app.get("*", async (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"))
-})*/
+})
 
 app.listen(PORT, () => {
     console.log(`Servidor está ouvindo na porta ${PORT}`)
