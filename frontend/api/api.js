@@ -2,13 +2,8 @@
 //Fetch ou Axios
 //Fetch é nativo do JavaScript
 //Axios é um pacote
-import "dotenv/config"
 import axios from "axios"
 
-//const { NODE_ENV } = process.env
-
-
-//const API_URL = NODE_ENV === "development" ? "http://localhost:3000/api" : "/api"
 const API_URL =  "https://jornadafullstack-6jz5.onrender.com/api"
 
 const responseArtists = await axios.get(`${API_URL}/artists`);
