@@ -1,14 +1,18 @@
 //Middleware (frontend/api/api.js)b-> permite as requisições
 
 import express from 'express'
-import cors from 'cors' 
+import cors from 'cors'
 import { db } from './connect.js';
 import path from "path"
+import swaggerUi from "swagger-ui-express"
 
+import swaggerDocument from "./swagger.json" with { type: "json" }
 const __dirname = path.resolve()
 
 const app = express();
 app.use(cors())
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const PORT = 3000;
 
