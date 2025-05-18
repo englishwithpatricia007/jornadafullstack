@@ -1,11 +1,62 @@
 {
-  "openai":"3.0.0",
+  "openai":"3.1.0",
   "swagger": "2.0",
   "info":{
     "title": "API para listagem de músicas e artistas",
-    "description": "Músicas e artistas do nosso 'Spotify' "
-
+    "description": "Músicas e artistas do nosso 'Spotify' ",
+    "contato": {
+      "email": "englishwithpatricia007@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers":[
+    { 
+      "url": "http://localhost:3000/v1",
+      "description": "API de teste"
+    }
+  ],
+  "paths": {
+    "/api/artists":{
+      "get":{
+        "summary": "Listagem de artistas",
+        "description": "Visualizar os artistas cadastrados",
+        "responses": {
+            "200" : {
+              "description": "A lista de artistas",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array"
+                  }
+                }
+              }
+            }
+        }
+      }
+    },
+    "/api/songs":{
+      "get":{
+        "summary": "Listagem de músicas",
+        "description": "Visualizar as músicas cadastrados",
+        "responses": {
+            "200" : {
+              "description": "A lista de músicas",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array"
+                  }
+                }
+              }
+            }
+        }
+      }
+    }
   }
+
+
+
+
+
+
 }
-
-
